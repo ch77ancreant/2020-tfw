@@ -3,20 +3,20 @@ function y = Gabor(x, tau ,t ,f ,sgm)
 dt = t(2) - t(1);
 df = f(2) - f(1);
 dtau = tau(2) - tau(1);
-S = dt/dtau;
 N = round(1/(dtau*df));
 
 m = f/df;
-m1 = round(mod(m,N) + 1);
+m1 = mod(m,N)+1;
 B = 1.9143/sqrt(sgm);
 Q = round(B/dtau);
+S = dt/dtau;
 
+x1 = zeros(1, N);
 k = 1;
 
-for nS = 1:S:length(x)
+for nS = 1:S:length(x)-1
     
     % generate x1(q)
-    x1 = zeros(1, N);
     for q = 1:2*Q+1
         a = nS - Q + q;
         if a>=1 && a<=length(x)
