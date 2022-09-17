@@ -12,3 +12,5 @@ Fs = 8000;
 
 signal = generate_wav(a, b, c, T, Fs);
 audiowrite('my_wave.wav', signal, Fs);
+
+
