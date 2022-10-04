@@ -1,4 +1,4 @@
-# 2020-tfw-hw
+# 2020-tfw-hw (time-frequency analysis and wavelet transform)
 
 1. Generate a *.wav file whose instantaneous frequency is $\pm(at^2+bt+c)$ Hz. 
 
